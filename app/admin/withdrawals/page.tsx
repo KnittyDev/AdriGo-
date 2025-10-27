@@ -392,7 +392,7 @@ export default function Withdrawals() {
                               {request.driver_id.substring(0, 8)}...
                             </td>
                             <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-[#131616] dark:text-white">
-                              {request.driver_name}
+                              {request.driver_name || 'Unknown Driver'}
                             </td>
                             <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-400">
                               <div className="max-w-xs">

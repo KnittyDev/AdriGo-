@@ -191,8 +191,8 @@ export default function Rides() {
   };
 
   const filteredRides = rides.filter(ride => {
-    const matchesSearch = ride.rider_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         ride.driver_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = (ride.rider_name?.toLowerCase().includes(searchTerm.toLowerCase()) || false) ||
+                         (ride.driver_name?.toLowerCase().includes(searchTerm.toLowerCase()) || false) ||
                          ride.pickup_address.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          ride.destination_address.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesStatus = statusFilter === 'All' || ride.status === statusFilter.toLowerCase();
@@ -363,10 +363,10 @@ export default function Rides() {
                           {filteredRides.map((ride) => (
                             <tr key={ride.id}>
                               <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-[#131616] dark:text-white">
-                                {ride.rider_name}
+                                {ride.rider_name || 'Unknown Rider'}
                               </td>
                               <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-                                {ride.driver_name}
+                                {ride.driver_name || 'Unassigned'}
                               </td>
                               <td className="px-4 py-4 text-sm text-gray-500 dark:text-gray-400">
                                 <div className="max-w-xs">
