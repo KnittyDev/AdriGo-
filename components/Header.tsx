@@ -29,6 +29,15 @@ export default function Header() {
               <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/contact">Contact</a>
             </nav>
             <div className="flex items-center gap-4">
+              {/* Driver Button */}
+              <a 
+                href="/driver"
+                className="hidden md:flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors"
+              >
+                <span className="material-symbols-outlined text-lg mr-2">local_taxi</span>
+                Driver
+              </a>
+              
               {/* Language Selector */}
               <LanguageSelector />
               
@@ -84,6 +93,16 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
+            </a>
+            
+            {/* Driver Button Mobile */}
+            <a 
+              href="/driver"
+              className="block text-base font-medium text-primary hover:text-primary/80 transition-colors py-2 flex items-center gap-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span className="material-symbols-outlined">local_taxi</span>
+              Become a Driver
             </a>
             
             {/* Mobile Language Selector */}
