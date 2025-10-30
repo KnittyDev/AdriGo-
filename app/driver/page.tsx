@@ -95,8 +95,7 @@ export default function DriverApplication() {
             vehicle_color: formData.vehicleColor,
             status: 'pending'
           }
-        ])
-        .select();
+        ]);
 
       if (error) {
         console.error('Error submitting application:', error);
@@ -126,7 +125,6 @@ export default function DriverApplication() {
     } catch (error) {
       console.error('Error submitting application:', error);
       toast.error('Failed to submit application. Please try again.', { id: loadingToast });
-    } finally {
       setLoading(false);
     }
   };
@@ -324,11 +322,12 @@ export default function DriverApplication() {
                   type="submit"
                   disabled={loading}
                   className="w-full flex items-center justify-center px-6 py-3 bg-primary text-white text-base font-bold rounded-xl hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  aria-disabled={loading}
                 >
                   {loading ? (
                     <>
                       <span className="material-symbols-outlined animate-spin mr-2">refresh</span>
-                      Submitting...
+                      Submitting your application...
                     </>
                   ) : (
                     <>
