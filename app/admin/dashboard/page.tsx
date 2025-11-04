@@ -37,6 +37,26 @@ export default function Dashboard() {
     fetchDashboardStats();
   }, []);
 
+  // Sekme değiştirip tekrar geldiğinde sayfayı yenile
+  useEffect(() => {
+    let wasHidden = false;
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        wasHidden = true;
+      } else if (wasHidden && !document.hidden) {
+        // Sekme görünür hale geldi ve önceden gizliydi
+        window.location.reload();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
+
   const fetchDashboardStats = async () => {
     try {
       setLoading(true);
@@ -186,6 +206,10 @@ export default function Dashboard() {
               <Link href="/admin/applications" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
                 <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">description</span>
                 <p className="text-sm font-medium">Applications</p>
+              </Link>
+              <Link href="/admin/discounts" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
+                <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">local_offer</span>
+                <p className="text-sm font-medium">Discounts</p>
               </Link>
               <Link href="/admin/reports" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
                 <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">monitoring</span>

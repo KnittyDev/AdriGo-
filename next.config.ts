@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  // Turbopack font optimization
+  experimental: {
+    optimizePackageImports: ['next/font/google'],
+  },
 };
 
 export default nextConfig;
