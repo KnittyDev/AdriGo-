@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
 // Custom App Store Badge Component
 const AppStoreBadge = ({ url, width = 200 }: { url: string; width?: number }) => (
@@ -34,6 +35,7 @@ const GooglePlayBadge = ({ url, width = 200 }: { url: string; width?: number }) 
 );
 
 export default function Home() {
+  const t = useTranslations('home');
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -44,10 +46,10 @@ export default function Home() {
   const reviewsRef = useRef<HTMLElement>(null);
   
   const texts = [
-    'Podgorica Airport',
-    'Budva Beach', 
-    'Podgorica Bus Station',
-    'Podgorica City Mall'
+    t('location1'),
+    t('location2'), 
+    t('location3'),
+    t('location4')
   ];
 
   useEffect(() => {
@@ -104,10 +106,10 @@ export default function Home() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}>
                 <h1 className="text-3xl font-extrabold tracking-tighter text-text-primary sm:text-4xl md:text-5xl lg:text-6xl px-4">
-                  Premium Ride-Hailing, At Your Fingertips.
+                  {t('heroTitle')}
                 </h1>
                 <h2 className="mx-auto max-w-2xl text-base sm:text-lg font-normal text-text-secondary px-4">
-                  Fast, reliable rides wherever you go, now on iOS and Android.
+                  {t('heroSubtitle')}
                 </h2>
               </div>
               <div className={`relative w-full max-w-4xl transition-all duration-1000 ease-out delay-300 ${
@@ -174,10 +176,10 @@ export default function Home() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}>
                 <h1 className="text-4xl font-extrabold tracking-tighter text-text-primary">
-                  Why Choose Us?
+                  {t('whyChooseUs')}
                 </h1>
                 <p className="mx-auto max-w-2xl text-lg text-text-secondary">
-                  Experience a seamless journey with features designed for your comfort and safety.
+                  {t('whyChooseUsDesc')}
                 </p>
               </div>
               <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -188,8 +190,8 @@ export default function Home() {
                     <span className="material-symbols-outlined !text-4xl">speed</span>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-text-primary">Quick Rides</p>
-                    <p className="mt-1 text-base text-text-secondary">Get to your destination faster with our optimized routing and network of drivers.</p>
+                    <p className="text-lg font-bold text-text-primary">{t('quickRides')}</p>
+                    <p className="mt-1 text-base text-text-secondary">{t('quickRidesDesc')}</p>
                   </div>
                 </div>
                 <div className={`flex flex-col items-center gap-4 rounded-xl bg-white p-8 text-center transition-all duration-700 ease-out hover:shadow-2xl hover:shadow-gray-200 hover:-translate-y-2 ${
@@ -199,8 +201,8 @@ export default function Home() {
                     <span className="material-symbols-outlined !text-4xl">shield</span>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-text-primary">Safe & Secure</p>
-                    <p className="mt-1 text-base text-text-secondary">Your safety is our priority. All drivers are vetted and all rides are tracked in real-time.</p>
+                    <p className="text-lg font-bold text-text-primary">{t('safeSecure')}</p>
+                    <p className="mt-1 text-base text-text-secondary">{t('safeSecureDesc')}</p>
                   </div>
                 </div>
                 <div className={`flex flex-col items-center gap-4 rounded-xl bg-white p-8 text-center transition-all duration-700 ease-out hover:shadow-2xl hover:shadow-gray-200 hover:-translate-y-2 ${
@@ -210,8 +212,8 @@ export default function Home() {
                     <span className="material-symbols-outlined !text-4xl">phone_iphone</span>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-text-primary">Futuristic Interface</p>
-                    <p className="mt-1 text-base text-text-secondary">A sleek, modern interface designed for an intuitive and effortless booking experience.</p>
+                    <p className="text-lg font-bold text-text-primary">{t('futuristicInterface')}</p>
+                    <p className="mt-1 text-base text-text-secondary">{t('futuristicInterfaceDesc')}</p>
                   </div>
                 </div>
                 <div className={`flex flex-col items-center gap-4 rounded-xl bg-white p-8 text-center transition-all duration-700 ease-out hover:shadow-2xl hover:shadow-gray-200 hover:-translate-y-2 ${
@@ -221,8 +223,8 @@ export default function Home() {
                     <span className="material-symbols-outlined !text-4xl">support_agent</span>
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-text-primary">24/7 Support</p>
-                    <p className="mt-1 text-base text-text-secondary">Our dedicated support team is available around the clock to assist you with any inquiries.</p>
+                    <p className="text-lg font-bold text-text-primary">{t('support247')}</p>
+                    <p className="mt-1 text-base text-text-secondary">{t('support247Desc')}</p>
                   </div>
                 </div>
               </div>
@@ -238,9 +240,9 @@ export default function Home() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}>
                 <h1 className="text-4xl font-extrabold tracking-tighter text-text-primary">
-                  Download the App Today
+                  {t('downloadApp')}
                 </h1>
-                <p className="mx-auto max-w-2xl text-lg text-text-secondary">Join thousands of satisfied riders and experience the future of transportation.</p>
+                <p className="mx-auto max-w-2xl text-lg text-text-secondary">{t('downloadAppDesc')}</p>
               </div>
               {/* Reviews */}
               <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -306,7 +308,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-base font-normal text-text-secondary">
-                    "An incredibly reliable and sleek app. The futuristic interface is a joy to use, and I always feel safe during my rides. Highly recommended!"
+                    "{t('review1')}"
                   </p>
                 </div>
                 <div className={`flex flex-col gap-4 rounded-xl bg-background-light p-6 transition-all duration-700 ease-out ${
@@ -371,7 +373,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-base font-normal text-text-secondary">
-                    "Finally, a ride-hailing app that gets it right. Fast, affordable, and the 24/7 support is a lifesaver. I use it for my daily commute."
+                    "{t('review2')}"
                   </p>
                 </div>
                 <div className={`flex flex-col gap-4 rounded-xl bg-background-light p-6 transition-all duration-700 ease-out ${
@@ -436,7 +438,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-base font-normal text-text-secondary">
-                    "The app's design is just beautiful. So clean and easy to book a ride. It feels like a premium service from start to finish."
+                    "{t('review3')}"
           </p>
         </div>
               </div>

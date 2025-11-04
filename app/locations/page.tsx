@@ -1,7 +1,9 @@
 'use client';
 import InteractiveMap from '@/components/InteractiveMap';
+import { useTranslations } from 'next-intl';
 
 export default function Locations() {
+  const t = useTranslations('locations');
   return (
     <main>
       {/* Page Heading */}
@@ -10,10 +12,10 @@ export default function Locations() {
           <div className="flex flex-col items-center text-center gap-8">
             <div className="flex flex-col gap-4 max-w-3xl">
               <h1 className="text-3xl font-extrabold tracking-tighter text-text-primary sm:text-4xl md:text-5xl lg:text-6xl px-4">
-                We're Here for You in Montenegro
+                {t('title')}
               </h1>
               <p className="mx-auto max-w-2xl text-base sm:text-lg font-normal text-text-secondary px-4">
-                Explore our expanding network and find us in cities across the country. Your next ride is just a tap away.
+                {t('subtitle')}
               </p>
             </div>
           </div>
@@ -24,9 +26,9 @@ export default function Locations() {
       <section className="py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-text-primary mb-2">Interactive Service Map</h2>
+            <h2 className="text-2xl font-bold text-text-primary mb-2">{t('interactiveMap')}</h2>
             <p className="text-text-secondary">
-              Click on the markers to learn more about our service areas
+              {t('interactiveMapDesc')}
             </p>
           </div>
           <div className="px-4 py-3">
@@ -42,10 +44,10 @@ export default function Locations() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-extrabold tracking-tighter text-text-primary sm:text-4xl px-4 pb-3">
-              Our Locations
+              {t('ourLocations')}
             </h2>
             <p className="text-text-secondary">
-              Find details about our service availability in each city.
+              {t('ourLocationsDesc')}
             </p>
           </div>
           
@@ -54,9 +56,9 @@ export default function Locations() {
             <div className="flex items-start gap-4 border-t border-solid border-gray-200 py-6">
               <span className="material-symbols-outlined text-primary text-3xl mt-1">directions_car</span>
               <div className="flex flex-col gap-1">
-                <p className="text-text-primary text-lg font-bold leading-normal">Podgorica</p>
+                <p className="text-text-primary text-lg font-bold leading-normal">{t('podgorica')}</p>
                 <p className="text-text-secondary text-base font-normal leading-normal">
-                  The bustling capital city, covered corner to corner with reliable service.
+                  {t('podgoricaDesc')}
                 </p>
               </div>
             </div>
@@ -65,9 +67,9 @@ export default function Locations() {
             <div className="flex items-start gap-4 border-t border-solid border-gray-200 py-6">
               <span className="material-symbols-outlined text-primary text-3xl mt-1">beach_access</span>
               <div className="flex flex-col gap-1">
-                <p className="text-text-primary text-lg font-bold leading-normal">Budva</p>
+                <p className="text-text-primary text-lg font-bold leading-normal">{t('budva')}</p>
                 <p className="text-text-secondary text-base font-normal leading-normal">
-                  Your ride along the stunning Adriatic coast and historic old town.
+                  {t('budvaDesc')}
                 </p>
               </div>
             </div>
@@ -76,9 +78,9 @@ export default function Locations() {
             <div className="flex items-start gap-4 border-t border-solid border-gray-200 py-6">
               <span className="material-symbols-outlined text-primary text-3xl mt-1">fort</span>
               <div className="flex flex-col gap-1">
-                <p className="text-text-primary text-lg font-bold leading-normal">Kotor</p>
+                <p className="text-text-primary text-lg font-bold leading-normal">{t('kotor')}</p>
                 <p className="text-text-secondary text-base font-normal leading-normal">
-                  Explore the historic bay with ease and comfort through our service.
+                  {t('kotorDesc')}
                 </p>
               </div>
             </div>
@@ -87,9 +89,9 @@ export default function Locations() {
             <div className="flex items-start gap-4 border-t border-solid border-gray-200 py-6">
               <span className="material-symbols-outlined text-primary text-3xl mt-1">flight</span>
               <div className="flex flex-col gap-1">
-                <p className="text-text-primary text-lg font-bold leading-normal">Tivat</p>
+                <p className="text-text-primary text-lg font-bold leading-normal">{t('tivat')}</p>
                 <p className="text-text-secondary text-base font-normal leading-normal">
-                  Seamless transfers to and from the airport and luxury marina.
+                  {t('tivatDesc')}
                 </p>
               </div>
             </div>
@@ -98,9 +100,9 @@ export default function Locations() {
             <div className="flex items-start gap-4 border-t border-solid border-gray-200 py-6">
               <span className="material-symbols-outlined text-primary text-3xl mt-1">landscape</span>
               <div className="flex flex-col gap-1">
-                <p className="text-text-primary text-lg font-bold leading-normal">Herceg Novi</p>
+                <p className="text-text-primary text-lg font-bold leading-normal">{t('hercegNovi')}</p>
                 <p className="text-text-secondary text-base font-normal leading-normal">
-                  Discover the beautiful coastal town with our reliable transportation.
+                  {t('hercegNoviDesc')}
                 </p>
               </div>
             </div>
@@ -109,9 +111,9 @@ export default function Locations() {
             <div className="flex items-start gap-4 border-t border-solid border-gray-200 py-6">
               <span className="material-symbols-outlined text-primary text-3xl mt-1">water</span>
               <div className="flex flex-col gap-1">
-                <p className="text-text-primary text-lg font-bold leading-normal">Ulcinj</p>
+                <p className="text-text-primary text-lg font-bold leading-normal">{t('ulcinj')}</p>
                 <p className="text-text-secondary text-base font-normal leading-normal">
-                  Experience the southernmost city with our premium ride service.
+                  {t('ulcinjDesc')}
                 </p>
               </div>
             </div>
@@ -124,10 +126,10 @@ export default function Locations() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-extrabold tracking-tighter text-text-primary sm:text-4xl px-4 pb-3">
-              Service Coverage
+              {t('serviceCoverage')}
             </h2>
             <p className="text-text-secondary">
-              We're continuously expanding our network to serve more areas.
+              {t('serviceCoverageDesc')}
             </p>
           </div>
           
@@ -137,24 +139,24 @@ export default function Locations() {
                 <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
                   <span className="material-symbols-outlined text-primary text-2xl">check_circle</span>
                 </div>
-                <h3 className="text-xl font-bold text-text-primary">Currently Available</h3>
+                <h3 className="text-xl font-bold text-text-primary">{t('currentlyAvailable')}</h3>
               </div>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  <span className="text-text-secondary">Podgorica (Full Coverage)</span>
+                  <span className="text-text-secondary">{t('podgoricaFull')}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  <span className="text-text-secondary">Budva (City Center & Beach Areas)</span>
+                  <span className="text-text-secondary">{t('budvaCity')}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  <span className="text-text-secondary">Kotor (Old Town & Bay Area)</span>
+                  <span className="text-text-secondary">{t('kotorBay')}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-primary rounded-full"></span>
-                  <span className="text-text-secondary">Tivat (Airport & Marina)</span>
+                  <span className="text-text-secondary">{t('tivatAirport')}</span>
                 </li>
               </ul>
             </div>
@@ -164,24 +166,24 @@ export default function Locations() {
                 <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
                   <span className="material-symbols-outlined text-orange-600 text-2xl">schedule</span>
                 </div>
-                <h3 className="text-xl font-bold text-text-primary">Coming Soon</h3>
+                <h3 className="text-xl font-bold text-text-primary">{t('comingSoon')}</h3>
               </div>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                  <span className="text-text-secondary">Herceg Novi (Q2 2025)</span>
+                  <span className="text-text-secondary">{t('hercegNoviSoon')}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                  <span className="text-text-secondary">Ulcinj (Q3 2025)</span>
+                  <span className="text-text-secondary">{t('ulcinjSoon')}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                  <span className="text-text-secondary">Cetinje (Q4 2025)</span>
+                  <span className="text-text-secondary">{t('cetinjeSoon')}</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                  <span className="text-text-secondary">Bar (Q1 2026)</span>
+                  <span className="text-text-secondary">{t('barSoon')}</span>
                 </li>
               </ul>
             </div>

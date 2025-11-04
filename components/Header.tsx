@@ -1,9 +1,12 @@
 'use client';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import LanguageSelector from './LanguageSelector';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const t = useTranslations('nav');
+  const tCommon = useTranslations('common');
 
   return (
     <>
@@ -22,11 +25,11 @@ export default function Header() {
               <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-text-primary">AdriGo+</h2>
             </a>
             <nav className="hidden items-center gap-8 md:flex md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
-              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/features">Features</a>
-              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/pricing">Pricing</a>
-              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/locations">Locations</a>
-              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/#download">Download</a>
-              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/contact">Contact</a>
+              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/features">{t('features')}</a>
+              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/pricing">{t('pricing')}</a>
+              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/locations">{t('locations')}</a>
+              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/#download">{t('download')}</a>
+              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/contact">{t('contact')}</a>
             </nav>
             <div className="flex items-center gap-4">
               {/* Driver Button */}
@@ -35,7 +38,7 @@ export default function Header() {
                 className="hidden md:flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors"
               >
                 <span className="material-symbols-outlined text-lg mr-2">local_taxi</span>
-                Driver
+                {t('driver')}
               </a>
               
               {/* Language Selector */}
@@ -59,40 +62,40 @@ export default function Header() {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 shadow-lg sticky top-16 z-40">
           <div className="px-4 py-4 space-y-3">
-            <a 
+              <a 
               className="block text-base font-medium text-text-secondary hover:text-text-primary transition-colors py-2"
               href="/features"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Features
+              {t('features')}
             </a>
             <a 
               className="block text-base font-medium text-text-secondary hover:text-text-primary transition-colors py-2"
               href="/pricing"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Pricing
+              {t('pricing')}
             </a>
             <a 
               className="block text-base font-medium text-text-secondary hover:text-text-primary transition-colors py-2"
               href="/locations"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Locations
+              {t('locations')}
             </a>
             <a 
               className="block text-base font-medium text-text-secondary hover:text-text-primary transition-colors py-2"
               href="/#download"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Download
+              {t('download')}
             </a>
             <a 
               className="block text-base font-medium text-text-secondary hover:text-text-primary transition-colors py-2"
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Contact
+              {t('contact')}
             </a>
             
             {/* Driver Button Mobile */}
@@ -102,14 +105,14 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <span className="material-symbols-outlined">local_taxi</span>
-              Become a Driver
+              {t('becomeDriver')}
             </a>
             
             {/* Mobile Language Selector */}
             <div className="pt-3 border-t border-gray-200">
               <div className="flex items-center gap-2 mb-2">
                 <span className="material-symbols-outlined text-text-secondary">language</span>
-                <span className="text-sm font-medium text-text-secondary">Language</span>
+                <span className="text-sm font-medium text-text-secondary">{tCommon('language')}</span>
               </div>
               <LanguageSelector />
             </div>

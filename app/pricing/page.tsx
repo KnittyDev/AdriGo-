@@ -1,4 +1,5 @@
 'use client';
+import { useTranslations } from 'next-intl';
 
 // Custom App Store Badge Component
 const AppStoreBadge = ({ url, width = 200 }: { url: string; width?: number }) => (
@@ -33,6 +34,7 @@ const GooglePlayBadge = ({ url, width = 200 }: { url: string; width?: number }) 
 );
 
 export default function Pricing() {
+  const t = useTranslations('pricing');
   return (
     <main>
         {/* Pricing Factors Section */}
@@ -41,10 +43,10 @@ export default function Pricing() {
             <div className="flex flex-col items-center gap-12">
               <div className="flex flex-col gap-4 text-center">
                 <h1 className="text-3xl font-extrabold tracking-tighter text-text-primary sm:text-4xl md:text-5xl lg:text-6xl px-4">
-                  Fair & Transparent Pricing
+                  {t('title')}
                 </h1>
                 <h2 className="mx-auto max-w-2xl text-base sm:text-lg font-normal text-text-secondary px-4">
-                  No surprises. See how your fare is calculated before you book a ride. Your price is based on a few key factors.
+                  {t('subtitle')}
                 </h2>
               </div>
               <div className="grid w-full max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
@@ -52,22 +54,22 @@ export default function Pricing() {
                   <div className="flex size-14 items-center justify-center rounded-xl bg-primary/20 text-primary">
                     <span className="material-symbols-outlined !text-4xl">route</span>
                   </div>
-                  <h3 className="text-xl font-bold text-text-primary">Distance</h3>
-                  <p className="text-text-secondary">The length of your journey from pickup to destination is a primary component of your fare.</p>
+                  <h3 className="text-xl font-bold text-text-primary">{t('distance')}</h3>
+                  <p className="text-text-secondary">{t('distanceDesc')}</p>
                 </div>
                 <div className="flex flex-col items-center gap-4 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
                   <div className="flex size-14 items-center justify-center rounded-xl bg-primary/20 text-primary">
                     <span className="material-symbols-outlined !text-4xl">timer</span>
                   </div>
-                  <h3 className="text-xl font-bold text-text-primary">Time</h3>
-                  <p className="text-text-secondary">We account for the estimated duration of the ride, including potential traffic conditions.</p>
+                  <h3 className="text-xl font-bold text-text-primary">{t('time')}</h3>
+                  <p className="text-text-secondary">{t('timeDesc')}</p>
                 </div>
                 <div className="flex flex-col items-center gap-4 rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm">
                   <div className="flex size-14 items-center justify-center rounded-xl bg-primary/20 text-primary">
                     <span className="material-symbols-outlined !text-4xl">trending_up</span>
                   </div>
-                  <h3 className="text-xl font-bold text-text-primary">Demand</h3>
-                  <p className="text-text-secondary">Prices may adjust during busy times to ensure a driver is always available when you need one.</p>
+                  <h3 className="text-xl font-bold text-text-primary">{t('demand')}</h3>
+                  <p className="text-text-secondary">{t('demandDesc')}</p>
                 </div>
               </div>
             </div>
@@ -80,10 +82,10 @@ export default function Pricing() {
             <div className="flex flex-col items-center gap-12">
               <div className="flex flex-col gap-4 text-center">
                 <h1 className="text-4xl font-extrabold tracking-tighter text-text-primary sm:text-5xl">
-                  Base Pricing Rates
+                  {t('baseRates')}
                 </h1>
                 <h2 className="mx-auto max-w-2xl text-lg font-normal text-text-secondary">
-                  Our transparent pricing structure ensures you always know what you're paying for.
+                  {t('baseRatesDesc')}
                 </h2>
               </div>
               <div className="grid w-full max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
@@ -92,9 +94,9 @@ export default function Pricing() {
                     <span className="material-symbols-outlined !text-5xl">route</span>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-2xl font-bold text-text-primary">Per Kilometer</h3>
-                    <p className="text-4xl font-extrabold text-primary">€0.65</p>
-                    <p className="text-text-secondary">Charged for every kilometer traveled during your ride</p>
+                    <h3 className="text-2xl font-bold text-text-primary">{t('perKilometer')}</h3>
+                    <p className="text-4xl font-extrabold text-primary">{t('perKilometerPrice')}</p>
+                    <p className="text-text-secondary">{t('perKilometerDesc')}</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center gap-6 rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
@@ -102,31 +104,31 @@ export default function Pricing() {
                     <span className="material-symbols-outlined !text-5xl">timer</span>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-2xl font-bold text-text-primary">Per Minute</h3>
-                    <p className="text-4xl font-extrabold text-primary">€0.10</p>
-                    <p className="text-text-secondary">Charged for every minute spent in the vehicle</p>
+                    <h3 className="text-2xl font-bold text-text-primary">{t('perMinute')}</h3>
+                    <p className="text-4xl font-extrabold text-primary">{t('perMinutePrice')}</p>
+                    <p className="text-text-secondary">{t('perMinuteDesc')}</p>
                   </div>
                 </div>
               </div>
               <div className="w-full max-w-3xl rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-xl font-bold text-text-primary text-center">How Your Fare is Calculated</h3>
+                  <h3 className="text-xl font-bold text-text-primary text-center">{t('calculation')}</h3>
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                     <div className="flex flex-col items-center gap-2 rounded-lg bg-background-light p-4">
-                      <span className="text-2xl font-bold text-primary">Distance</span>
+                      <span className="text-2xl font-bold text-primary">{t('distanceLabel')}</span>
                       <span className="text-sm text-text-secondary">km × €0.65</span>
                     </div>
                     <div className="flex items-center justify-center">
                       <span className="text-2xl text-text-secondary">+</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 rounded-lg bg-background-light p-4">
-                      <span className="text-2xl font-bold text-primary">Time</span>
+                      <span className="text-2xl font-bold text-primary">{t('timeLabel')}</span>
                       <span className="text-sm text-text-secondary">minutes × €0.10</span>
                     </div>
                   </div>
                   <div className="flex items-center justify-center gap-2 pt-2">
                     <span className="text-lg text-text-secondary">=</span>
-                    <span className="text-xl font-bold text-text-primary">Your Total Fare</span>
+                    <span className="text-xl font-bold text-text-primary">{t('totalFare')}</span>
                   </div>
                 </div>
               </div>
@@ -140,10 +142,10 @@ export default function Pricing() {
             <div className="flex flex-col items-center gap-12">
               <div className="flex flex-col gap-4 text-center">
                 <h1 className="text-4xl font-extrabold tracking-tighter text-text-primary sm:text-5xl">
-                  Example Fares
+                  {t('exampleFares')}
                 </h1>
                 <h2 className="mx-auto max-w-2xl text-lg font-normal text-text-secondary">
-                  To give you a better idea, here are some estimated costs for typical routes in Montenegro. Actual prices may vary.
+                  {t('exampleFaresDesc')}
                 </h2>
               </div>
               <div className="w-full max-w-4xl space-y-4">
@@ -153,12 +155,12 @@ export default function Pricing() {
                       <span className="material-symbols-outlined !text-2xl">flight_takeoff</span>
                     </div>
                     <div className="flex flex-col">
-                      <p className="font-bold text-text-primary">Podgorica Center to Podgorica Airport</p>
-                      <p className="text-sm text-text-secondary">Approx. 25 km, 30 minutes</p>
-                      <p className="text-xs text-text-secondary">(25km × €0.65) + (30min × €0.10) = €19.25</p>
+                      <p className="font-bold text-text-primary">{t('route1')}</p>
+                      <p className="text-sm text-text-secondary">{t('route1Details')}</p>
+                      <p className="text-xs text-text-secondary">{t('route1Calc')}</p>
                     </div>
                   </div>
-                  <p className="text-2xl font-bold text-primary">~€19-22</p>
+                  <p className="text-2xl font-bold text-primary">{t('route1Price')}</p>
                 </div>
                 <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                   <div className="flex items-center gap-4">
@@ -166,12 +168,12 @@ export default function Pricing() {
                       <span className="material-symbols-outlined !text-2xl">castle</span>
                     </div>
                     <div className="flex flex-col">
-                      <p className="font-bold text-text-primary">Budva to Kotor Old Town</p>
-                      <p className="text-sm text-text-secondary">Approx. 23 km, 60 minutes (summer season)</p>
-                      <p className="text-xs text-text-secondary">(23km × €0.65) + (60min × €0.10) = €20.95</p>
+                      <p className="font-bold text-text-primary">{t('route2')}</p>
+                      <p className="text-sm text-text-secondary">{t('route2Details')}</p>
+                      <p className="text-xs text-text-secondary">{t('route2Calc')}</p>
                     </div>
                   </div>
-                  <p className="text-2xl font-bold text-primary">~€21-24</p>
+                  <p className="text-2xl font-bold text-primary">{t('route2Price')}</p>
                 </div>
                 <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                   <div className="flex items-center gap-4">
@@ -179,12 +181,12 @@ export default function Pricing() {
                       <span className="material-symbols-outlined !text-2xl">landscape</span>
                     </div>
                     <div className="flex flex-col">
-                      <p className="font-bold text-text-primary">Cetinje to Lovćen National Park</p>
-                      <p className="text-sm text-text-secondary">Approx. 8 km, 15-20 minutes (mountain road)</p>
-                      <p className="text-xs text-text-secondary">(8km × €0.65) + (18min × €0.10) = €7.00</p>
+                      <p className="font-bold text-text-primary">{t('route3')}</p>
+                      <p className="text-sm text-text-secondary">{t('route3Details')}</p>
+                      <p className="text-xs text-text-secondary">{t('route3Calc')}</p>
                     </div>
                   </div>
-                  <p className="text-2xl font-bold text-primary">~€7-9</p>
+                  <p className="text-2xl font-bold text-primary">{t('route3Price')}</p>
                 </div>
                 <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                   <div className="flex items-center gap-4">
@@ -192,12 +194,12 @@ export default function Pricing() {
                       <span className="material-symbols-outlined !text-2xl">water</span>
                     </div>
                     <div className="flex flex-col">
-                      <p className="font-bold text-text-primary">Herceg Novi to Perast</p>
-                      <p className="text-sm text-text-secondary">Approx. 5 km, 8-12 minutes (coastal route)</p>
-                      <p className="text-xs text-text-secondary">(5km × €0.65) + (10min × €0.10) = €4.25</p>
+                      <p className="font-bold text-text-primary">{t('route4')}</p>
+                      <p className="text-sm text-text-secondary">{t('route4Details')}</p>
+                      <p className="text-xs text-text-secondary">{t('route4Calc')}</p>
                     </div>
                   </div>
-                  <p className="text-2xl font-bold text-primary">~€4-5</p>
+                  <p className="text-2xl font-bold text-primary">{t('route4Price')}</p>
                 </div>
                 <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
                   <div className="flex items-center gap-4">
@@ -205,12 +207,12 @@ export default function Pricing() {
                       <span className="material-symbols-outlined !text-2xl">local_shipping</span>
                     </div>
                     <div className="flex flex-col">
-                      <p className="font-bold text-text-primary">Ulcinj to Bar Port</p>
-                      <p className="text-sm text-text-secondary">Approx. 15 km, 20-30 minutes (coastal highway)</p>
-                      <p className="text-xs text-text-secondary">(15km × €0.65) + (25min × €0.10) = €12.25</p>
+                      <p className="font-bold text-text-primary">{t('route5')}</p>
+                      <p className="text-sm text-text-secondary">{t('route5Details')}</p>
+                      <p className="text-xs text-text-secondary">{t('route5Calc')}</p>
                     </div>
                   </div>
-                  <p className="text-2xl font-bold text-primary">~€12-14</p>
+                  <p className="text-2xl font-bold text-primary">{t('route5Price')}</p>
                 </div>
               </div>
             </div>
@@ -221,12 +223,12 @@ export default function Pricing() {
         <section className="bg-background-light py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center gap-8 text-center">
-              <h1 className="text-4xl font-extrabold tracking-tighter text-text-primary">
-                Ready to Ride?
-              </h1>
-              <p className="mx-auto max-w-2xl text-lg text-text-secondary">
-                Download the app and get moving in minutes. Your next ride is just a tap away.
-              </p>
+                <h1 className="text-4xl font-extrabold tracking-tighter text-text-primary">
+                  {t('readyToRide')}
+                </h1>
+                <p className="mx-auto max-w-2xl text-lg text-text-secondary">
+                  {t('readyToRideDesc')}
+                </p>
               <div className="flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
                 <AppStoreBadge
                   url="https://apps.apple.com/app/adrigo-plus/id123456789"

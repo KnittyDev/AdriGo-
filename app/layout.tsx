@@ -5,6 +5,10 @@ import { AuthProvider } from "@/lib/auth";
 import { Toaster } from "react-hot-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getLocale as getNextIntlLocale } from 'next-intl/server';
+import { getLocale } from '@/lib/i18n';
+import LanguageDetector from '@/components/LanguageDetector';
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -21,13 +25,17 @@ export const metadata: Metadata = {
   description: "Revolutionary transportation platform connecting riders with drivers. Fast, reliable, and affordable rides at your fingertips.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Get locale and messages from next-intl
+  const locale = await getNextIntlLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
         <style dangerouslySetInnerHTML={{
@@ -41,10 +49,12 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased font-display bg-white text-text-primary`}
       >
-        <AuthProvider>
-          <Header />
-          {children}
-          <Footer />
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <LanguageDetector />
+          <AuthProvider>
+            <Header />
+            {children}
+            <Footer />
           <Toaster
             position="top-right"
             toastOptions={{
@@ -69,7 +79,8 @@ export default function RootLayout({
               },
             }}
           />
-        </AuthProvider>
+          </AuthProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

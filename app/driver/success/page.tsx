@@ -2,8 +2,10 @@
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 function SuccessContent() {
+  const t = useTranslations('driverSuccess');
   const searchParams = useSearchParams();
   const applicantName = searchParams.get('name') || 'applicant';
 
@@ -23,24 +25,24 @@ function SuccessContent() {
             {/* Success Message */}
             <div className="flex flex-col gap-4 max-w-2xl">
               <h1 className="text-3xl font-extrabold tracking-tighter text-text-primary sm:text-4xl md:text-5xl px-4">
-                Application Submitted Successfully!
+                {t('title')}
               </h1>
               <p className="mx-auto max-w-xl text-base sm:text-lg font-normal text-text-secondary px-4">
-                Thank you for your interest in becoming a driver with AdriGo+, {applicantName}! We have received your application and will review it shortly.
+                {t('thankYou', { name: applicantName })}
               </p>
             </div>
 
             {/* What's Next */}
             <div className="w-full bg-background-light rounded-xl border border-gray-200 p-6 sm:p-8 mt-8">
-              <h2 className="text-xl font-bold text-text-primary mb-6 text-left">What happens next?</h2>
+              <h2 className="text-xl font-bold text-text-primary mb-6 text-left">{t('whatsNext')}</h2>
               <div className="space-y-4 text-left">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
                     <span className="text-primary font-bold">1</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-text-primary mb-1">Review Process</h3>
-                    <p className="text-sm text-text-secondary">Our team will review your application within 2-3 business days.</p>
+                    <h3 className="font-semibold text-text-primary mb-1">{t('step1')}</h3>
+                    <p className="text-sm text-text-secondary">{t('step1Desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -48,8 +50,8 @@ function SuccessContent() {
                     <span className="text-primary font-bold">2</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-text-primary mb-1">Contact</h3>
-                    <p className="text-sm text-text-secondary">We will contact you via email or phone to discuss the next steps.</p>
+                    <h3 className="font-semibold text-text-primary mb-1">{t('step2')}</h3>
+                    <p className="text-sm text-text-secondary">{t('step2Desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -57,8 +59,8 @@ function SuccessContent() {
                     <span className="text-primary font-bold">3</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-text-primary mb-1">Onboarding</h3>
-                    <p className="text-sm text-text-secondary">Once approved, we'll guide you through the onboarding process.</p>
+                    <h3 className="font-semibold text-text-primary mb-1">{t('step3')}</h3>
+                    <p className="text-sm text-text-secondary">{t('step3Desc')}</p>
                   </div>
                 </div>
               </div>
@@ -71,14 +73,14 @@ function SuccessContent() {
                 className="flex items-center justify-center px-6 py-3 bg-primary text-white text-base font-bold rounded-xl hover:bg-primary/90 transition-colors"
               >
                 <span className="material-symbols-outlined mr-2">home</span>
-                Back to Home
+                {t('backToHome')}
               </Link>
               <Link
                 href="/contact"
                 className="flex items-center justify-center px-6 py-3 bg-white border border-gray-300 text-text-primary text-base font-bold rounded-xl hover:bg-gray-50 transition-colors"
               >
                 <span className="material-symbols-outlined mr-2">mail</span>
-                Contact Us
+                {t('contactUs')}
               </Link>
             </div>
 
@@ -87,10 +89,10 @@ function SuccessContent() {
               <div className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-blue-600 text-xl">info</span>
                 <div className="text-left">
-                  <p className="text-sm text-blue-900 font-medium mb-1">Need help?</p>
+                  <p className="text-sm text-blue-900 font-medium mb-1">{t('needHelp')}</p>
                   <p className="text-xs text-blue-700">
-                    If you have any questions about your application, please don't hesitate to{' '}
-                    <Link href="/contact" className="underline font-medium">contact us</Link>.
+                    {t('needHelpDesc')}{' '}
+                    <Link href="/contact" className="underline font-medium">{t('contactUs')}</Link>.
                   </p>
                 </div>
               </div>
