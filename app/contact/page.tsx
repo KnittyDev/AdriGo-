@@ -83,7 +83,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-text-primary">{t('emailLabel')}</p>
-                      <a className="text-sm text-text-secondary hover:text-primary" href="mailto:support@adrigo.com">support@adrigo.com</a>
+                      <a className="text-sm text-text-secondary hover:text-primary" href="mailto:hello@adrigo.me">hello@adrigo.me</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -92,7 +92,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-text-primary">{t('phoneLabel')}</p>
-                      <a className="text-sm text-text-secondary hover:text-primary" href="tel:+382-20-123-456">+382 (20) 123-456</a>
+                      <a className="text-sm text-text-secondary hover:text-primary" href="tel:+48455514375">+48455514375</a>
                     </div>
                   </div>
                 </div>
