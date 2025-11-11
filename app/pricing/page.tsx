@@ -1,5 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
+import { useState, useEffect } from 'react';
+import { supabase } from '@/lib/supabase';
 
 // Custom App Store Badge Component
 const AppStoreBadge = ({ url, width = 200 }: { url: string; width?: number }) => (
@@ -33,8 +35,53 @@ const GooglePlayBadge = ({ url, width = 200 }: { url: string; width?: number }) 
   </a>
 );
 
+interface PricingSetting {
+  per_km_rate: string;
+  per_minute_rate: string;
+}
+
 export default function Pricing() {
   const t = useTranslations('pricing');
+  const [pricing, setPricing] = useState<PricingSetting | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPricing = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('pricing_settings')
+          .select('per_km_rate, per_minute_rate')
+          .eq('is_active', true)
+          .order('updated_at', { ascending: false })
+          .limit(1)
+          .single();
+
+        if (error) {
+          console.error('Error fetching pricing:', error);
+          // Fallback to default values if error
+          setPricing({ per_km_rate: '0.65', per_minute_rate: '0.10' });
+        } else if (data) {
+          setPricing(data);
+        } else {
+          // Fallback to default values if no data
+          setPricing({ per_km_rate: '0.65', per_minute_rate: '0.10' });
+        }
+      } catch (error) {
+        console.error('Error fetching pricing:', error);
+        // Fallback to default values
+        setPricing({ per_km_rate: '0.65', per_minute_rate: '0.10' });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPricing();
+  }, []);
+
+  // Default values as fallback
+  const perKmRate = pricing ? parseFloat(pricing.per_km_rate).toFixed(2) : '0.65';
+  const perMinuteRate = pricing ? parseFloat(pricing.per_minute_rate).toFixed(2) : '0.10';
+
   return (
     <main>
         {/* Pricing Factors Section */}
@@ -95,7 +142,7 @@ export default function Pricing() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="text-2xl font-bold text-text-primary">{t('perKilometer')}</h3>
-                    <p className="text-4xl font-extrabold text-primary">{t('perKilometerPrice')}</p>
+                    <p className="text-4xl font-extrabold text-primary">€{perKmRate}</p>
                     <p className="text-text-secondary">{t('perKilometerDesc')}</p>
                   </div>
                 </div>
@@ -105,7 +152,7 @@ export default function Pricing() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="text-2xl font-bold text-text-primary">{t('perMinute')}</h3>
-                    <p className="text-4xl font-extrabold text-primary">{t('perMinutePrice')}</p>
+                    <p className="text-4xl font-extrabold text-primary">€{perMinuteRate}</p>
                     <p className="text-text-secondary">{t('perMinuteDesc')}</p>
                   </div>
                 </div>
@@ -116,14 +163,14 @@ export default function Pricing() {
                   <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                     <div className="flex flex-col items-center gap-2 rounded-lg bg-background-light p-4">
                       <span className="text-2xl font-bold text-primary">{t('distanceLabel')}</span>
-                      <span className="text-sm text-text-secondary">km × €0.65</span>
+                      <span className="text-sm text-text-secondary">km × €{perKmRate}</span>
                     </div>
                     <div className="flex items-center justify-center">
                       <span className="text-2xl text-text-secondary">+</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 rounded-lg bg-background-light p-4">
                       <span className="text-2xl font-bold text-primary">{t('timeLabel')}</span>
-                      <span className="text-sm text-text-secondary">minutes × €0.10</span>
+                      <span className="text-sm text-text-secondary">minutes × €{perMinuteRate}</span>
                     </div>
                   </div>
                   <div className="flex items-center justify-center gap-2 pt-2">
