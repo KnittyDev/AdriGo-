@@ -4,8 +4,8 @@ import { ProtectedRoute } from '@/lib/protected-route';
 import { useAuth } from '@/lib/auth';
 import { supabase } from '@/lib/supabase';
 import toast from 'react-hot-toast';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import AdminSidebar from '@/components/admin/AdminSidebar';
 
 interface RideRequest {
   id: string;
@@ -44,6 +44,8 @@ export default function Rides() {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 50;
   const { signOut, profile } = useAuth();
   const router = useRouter();
 
@@ -219,6 +221,17 @@ export default function Rides() {
     return matchesSearch && matchesStatus;
   });
 
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredRides.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedRides = filteredRides.slice(startIndex, endIndex);
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, statusFilter]);
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -233,66 +246,7 @@ export default function Rides() {
     <ProtectedRoute>
       <div className="relative flex min-h-screen w-full flex-col group/design-root bg-background-light dark:bg-background-dark">
         <div className="flex flex-1">
-          {/* Sidebar */}
-          <aside className="flex w-64 flex-col border-r border-gray-200 dark:border-gray-700 bg-white dark:bg-background-dark p-4 shrink-0">
-            {/* Logo */}
-            <div className="flex items-center gap-3 px-3 py-2 mb-4">
-              <div className="h-8 w-8">
-                <img 
-                  src="/adrigologo.png" 
-                  alt="AdriGo+ Logo" 
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <h2 className="text-lg font-bold tracking-[-0.015em] text-[#131616] dark:text-white">Admin Panel</h2>
-            </div>
-
-            {/* Navigation */}
-            <nav className="flex flex-col gap-2 flex-1">
-              <Link href="/admin/dashboard" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
-                <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">dashboard</span>
-                <p className="text-sm font-medium">Dashboard</p>
-              </Link>
-              <Link href="/admin/rides" className="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary">
-                <span className="material-symbols-outlined text-primary" style={{fontVariationSettings: "'FILL' 1"}}>directions_car</span>
-                <p className="text-sm font-bold">Rides</p>
-              </Link>
-              <Link href="/admin/users" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
-                <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">group</span>
-                <p className="text-sm font-medium">Users</p>
-              </Link>
-              <Link href="/admin/withdrawals" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
-                <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">paid</span>
-                <p className="text-sm font-medium">Withdrawals</p>
-              </Link>
-              <Link href="/admin/applications" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
-                <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">description</span>
-                <p className="text-sm font-medium">Applications</p>
-              </Link>
-              <Link href="/admin/discounts" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
-                <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">local_offer</span>
-                <p className="text-sm font-medium">Discounts</p>
-              </Link>
-              <Link href="/admin/pricing" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
-                <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">attach_money</span>
-                <p className="text-sm font-medium">Pricing</p>
-              </Link>
-              <Link href="/admin/reports" className="flex items-center gap-3 px-3 py-2 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-primary/20">
-                <span className="material-symbols-outlined text-gray-600 dark:text-gray-400">monitoring</span>
-                <p className="text-sm font-medium">Reports</p>
-              </Link>
-            </nav>
-
-            {/* User Profile */}
-            <div className="flex items-center gap-3 border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">
-              <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" 
-                   style={{backgroundImage: profile?.avatar_url ? `url(${profile.avatar_url})` : 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZkuiPQz-9bU_xvPIJ-xdF7ktVgpng0Hxwto0kFab1hUZVGi8ygSPqpResjQ9sUgJJvu5RG0XtpZLQk836HvE_xCqvwX92lGLHjW9iC08hE3cwNYO1fToE5n51-ZFsgLLIvoH_C1db8xIooZXsEYoSznmoAmYECEVaOUlDhUohkZ6TLuiix-E1ydx6qeRqkBDtDoLsZxW9-fvcMw6s-9AY37wF1vrYvgREUFfePc6Dh5Qh27yfTXRxefJYi7cep7O8zNmRB7Do9-wd")'}}></div>
-              <div className="flex flex-col">
-                <h1 className="text-base font-medium text-[#131616] dark:text-white">{profile?.full_name || 'Admin User'}</h1>
-                <p className="text-sm font-normal text-gray-500 dark:text-gray-400">Administrator</p>
-              </div>
-            </div>
-          </aside>
+          <AdminSidebar />
 
           {/* Main Content */}
           <main className="flex-1 flex flex-col">
@@ -322,9 +276,14 @@ export default function Rides() {
               <div className="bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm">
                 {/* Title and Actions */}
                 <div className="flex flex-wrap justify-between items-center gap-4 mb-6">
-                  <p className="text-[#131616] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">
-                    Ride Requests
-                  </p>
+                  <div>
+                    <p className="text-[#131616] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">
+                      Ride Requests
+                    </p>
+                    <p className="text-gray-500 dark:text-gray-400 mt-1 text-sm">
+                      Showing {startIndex + 1}-{Math.min(endIndex, filteredRides.length)} of {filteredRides.length} rides
+                    </p>
+                  </div>
                   <button 
                     onClick={fetchRides}
                     className="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-primary text-[#131616] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-4 hover:bg-primary/90 transition-colors"
@@ -392,7 +351,14 @@ export default function Rides() {
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                          {filteredRides.map((ride) => (
+                          {paginatedRides.length === 0 ? (
+                            <tr>
+                              <td colSpan={9} className="px-4 py-8 text-center text-gray-500">
+                                No rides found.
+                              </td>
+                            </tr>
+                          ) : (
+                            paginatedRides.map((ride) => (
                             <tr key={ride.id}>
                               <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-[#131616] dark:text-white">
                                 {ride.rider_name || 'Unknown Rider'}
@@ -468,9 +434,63 @@ export default function Rides() {
                                 </div>
                               </td>
                             </tr>
-                          ))}
+                            ))
+                          )}
                         </tbody>
                       </table>
+                    </div>
+                  )}
+
+                  {/* Pagination */}
+                  {!loading && filteredRides.length > 0 && totalPages > 1 && (
+                    <div className="flex items-center justify-between border-t border-gray-200 dark:border-gray-700 px-4 py-3 mt-4">
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                          disabled={currentPage === 1}
+                          className="px-3 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        >
+                          Previous
+                        </button>
+                        <div className="flex items-center gap-1">
+                          {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                            let pageNum;
+                            if (totalPages <= 5) {
+                              pageNum = i + 1;
+                            } else if (currentPage <= 3) {
+                              pageNum = i + 1;
+                            } else if (currentPage >= totalPages - 2) {
+                              pageNum = totalPages - 4 + i;
+                            } else {
+                              pageNum = currentPage - 2 + i;
+                            }
+                            
+                            return (
+                              <button
+                                key={pageNum}
+                                onClick={() => setCurrentPage(pageNum)}
+                                className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                                  currentPage === pageNum
+                                    ? 'bg-primary text-white'
+                                    : 'text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'
+                                }`}
+                              >
+                                {pageNum}
+                              </button>
+                            );
+                          })}
+                        </div>
+                        <button
+                          onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                          disabled={currentPage === totalPages}
+                          className="px-3 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        >
+                          Next
+                        </button>
+                      </div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">
+                        Page {currentPage} of {totalPages}
+                      </div>
                     </div>
                   )}
                 </div>
