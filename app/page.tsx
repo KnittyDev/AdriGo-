@@ -18,7 +18,7 @@ const AppStoreBadge = ({ url, width = 200 }: { url: string; width?: number }) =>
   </a>
 );
 
-// Custom Google Play Badge Component
+// Custom Google Play Badge Component //TODO: Add Google Play Badge
 const GooglePlayBadge = ({ url, width = 200 }: { url: string; width?: number }) => (
   <a
     href={url}
