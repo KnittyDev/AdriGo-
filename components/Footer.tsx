@@ -7,6 +7,7 @@ export default function Footer() {
           <div className="flex items-center gap-6">
             <a className="text-sm text-text-secondary transition-colors hover:text-text-primary" href="/privacy">Privacy Policy</a>
             <a className="text-sm text-text-secondary transition-colors hover:text-text-primary" href="/terms">Terms of Service</a>
+            <a className="text-sm text-text-secondary transition-colors hover:text-text-primary" href="/driver-agreement">Driver Agreement</a>
           </div>
         </div>
       </div>

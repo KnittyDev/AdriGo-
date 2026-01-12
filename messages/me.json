@@ -366,5 +366,105 @@
     "needHelpText": "Ako imate bilo kakva pitanja o brisanju naloga ili vam je potrebna pomoć, molimo vas da nas kontaktirate:",
     "contactEmail": "Email",
     "contactPhone": "Telefon"
+  },
+  "driverAgreement": {
+    "title": "Sporazum o Vozaču",
+    "lastUpdated": "Posljednje ažuriranje: Decembar 2025",
+    "intro": "Uvod",
+    "introText": "Ovaj Sporazum o Vozaču (\"Sporazum\") reguliše vaš odnos sa Rivora (\"mi,\" \"naš,\" ili \"nama\") kao partnerom vozača na našoj platformi. Prijavljivanjem da postanete vozač, prihvatate da budete vezani uslovima i odredbama izloženim u ovom Sporazumu.",
+    "relationship": "Odnos Nezavisnog Izvođača",
+    "relationshipText": "Priznajete i prihvatate da ste nezavisni izvođač, a ne zaposleni, agent ili partner Rivora. Nemate ovlašćenje da vezujete Rivora i nećete se predstavljati kao zaposleni, agent ili ovlašćeni predstavnik Rivora.",
+    "relationshipItems": {
+      "item1": "Slobodni ste da odredite svoje radno vrijeme i raspored",
+      "item2": "Odgovorni ste za svoje poreze i osiguranje",
+      "item3": "Možete istovremeno koristiti druge platforme za pozivanje vozila",
+      "item4": "Nemate pravo na beneficije ili zaštitu zaposlenih"
+    },
+    "driverRequirements": "Zahtjevi za Vozača",
+    "driverRequirementsText": "Da biste koristili našu platformu kao vozač, morate ispuniti i održavati sljedeće zahtjeve:",
+    "driverRequirementsItems": {
+      "item1": "Biti najmanje 21 godina star",
+      "item2": "Posjedovati važeću vozačku dozvolu najmanje 2 godine",
+      "item3": "Imati važeću registraciju vozila i osiguranje",
+      "item4": "Proći provjeru pozadine i pregled vozila",
+      "item5": "Održavati čist vozački dosije",
+      "item6": "Imati pametni telefon sposoban za pokretanje naše mobilne aplikacije",
+      "item7": "Pružiti tačne i ažurirane lične i informacije o vozilu"
+    },
+    "vehicleRequirements": "Zahtjevi za Vozilo",
+    "vehicleRequirementsText": "Vaše vozilo mora ispuniti sljedeće standarde:",
+    "vehicleRequirementsItems": {
+      "item1": "Biti sedan sa 4 vrata ili veće vozilo",
+      "item2": "Biti stariji od 10 godina (mogu se primijeniti izuzeci)",
+      "item3": "Biti u dobrom radnom stanju i proći preglede bezbjednosti",
+      "item4": "Imati važeću registraciju i osiguranje",
+      "item5": "Ispuniti sve lokalne i nacionalne standarde bezbjednosti",
+      "item6": "Biti čist i dobro održavan"
+    },
+    "driverObligations": "Obaveze Vozača",
+    "driverObligationsText": "Kao vozač, prihvatate da:",
+    "driverObligationsItems": {
+      "item1": "Pružate bezbjedne, profesionalne i učtive usluge prevoza",
+      "item2": "Poštujete sve primjenjive saobraćajne zakone i propise",
+      "item3": "Održavate svoje vozilo u bezbjednom i ispravnom stanju",
+      "item4": "Postupate sa svim putnicima sa poštovanjem i profesionalnošću",
+      "item5": "Ne diskriminišete putnike na osnovu rase, religije, pola ili bilo koje druge zaštićene karakteristike",
+      "item6": "Ne koristite drogu ili alkohol tokom pružanja usluga",
+      "item7": "Brzo odgovarate na zahtjeve za vožnju kada ste dostupni",
+      "item8": "Završavate sve prihvaćene vožnje osim ako ne postoji valjana bezbjednosna briga"
+    },
+    "compensation": "Naknada i Naknade",
+    "compensationText": "Dobit ćete naknadu za završene vožnje na osnovu naše strukture cijena. Sljedeće se primjenjuje:",
+    "compensationItems": {
+      "item1": "Cijene se izračunavaju na osnovu udaljenosti, vremena i primjenjivih stopa",
+      "item2": "Uslužna naknada ili provizija može se odbiti od vaše zarade",
+      "item3": "Plaćanje se obrađuje nedjeljno na vaš određeni način plaćanja",
+      "item4": "Odgovorni ste za sve troškove vezane za vozilo, uključujući gorivo, održavanje i osiguranje",
+      "item5": "Odgovorni ste za svoje poreze na zaradu"
+    },
+    "platformUse": "Korišćenje Platforme i Ograničenja",
+    "platformUseText": "Prihvatate da koristite našu platformu samo za zakonske svrhe i u skladu sa ovim Sporazumom. Prihvatate da nećete:",
+    "platformUseItems": {
+      "item1": "Prihvatati vožnje van platforme ili pokušavati zaobići naš sistem plaćanja",
+      "item2": "Otkazivati vožnje bez valjanog razloga ili baviti se prevarom",
+      "item3": "Koristiti platformu za transport ilegalne robe ili baviti se ilegalnim aktivnostima",
+      "item4": "Dijeliti svoje podatke za prijavu sa drugima",
+      "item5": "Manipulisati platformom ili koristiti automatizovane sisteme za sticanje nepravedne prednosti",
+      "item6": "Tražiti napojnice ili dodatna plaćanja van platforme"
+    },
+    "safety": "Bezbjednost i Osiguranje",
+    "safetyText": "Bezbjednost je naš prioritet. Prihvatate da:",
+    "safetyItems": {
+      "item1": "Održavate odgovarajuće osiguranje za svoje vozilo",
+      "item2": "Odmah prijavite bilo kakve nesreće ili incidente",
+      "item3": "Sarađujete sa istragama o bezbjednosti",
+      "item4": "Pratite sve protokole i smjernice za bezbjednost koje obezbjeđuje Rivora",
+      "item5": "Osigurate da vaše vozilo ispunjava sve standarde bezbjednosti"
+    },
+    "termination": "Prekid",
+    "terminationText": "Svaka strana može prekinuti ovaj Sporazum u bilo kom trenutku sa ili bez razloga. Rivora može odmah suspendovati ili prekinuti vaš pristup platformi ako:",
+    "terminationItems": {
+      "item1": "Kršite bilo koje uslove ovog Sporazuma",
+      "item2": "Bavite se prevarom, ilegalnim ili nebezbjednim ponašanjem",
+      "item3": "Ne održavate potrebne dozvole, osiguranje ili standarde vozila",
+      "item4": "Dobijate više žalbi ili loše ocjene od putnika"
+    },
+    "intellectualProperty": "Intelektualna Svojina",
+    "intellectualPropertyText": "Sva prava intelektualne svojine na platformi, uključujući, ali ne ograničavajući se na, žigove, logotipe i softver, ostaju isključivo svojina Rivora. Dodjeljuje vam se ograničena, neekskluzivna, neprenosiva licenca za korišćenje platforme isključivo u svrhu pružanja usluga prevozа.",
+    "limitation": "Ograničenje Odgovornosti",
+    "limitationText": "U maksimalnoj mjeri dozvoljenoj zakonom, Rivora neće biti odgovorna za bilo kakve indirektne, slučajne, posebne, posljedične ili kaznene štete koje proističu iz ili se odnose na vaše korišćenje platforme ili vaše pružanje usluga prevozа.",
+    "indemnification": "Odšteta",
+    "indemnificationText": "Prihvatate da nadoknadite i oslobodite od odgovornosti Rivora i njenе službenike, direktore, zaposlene i agente od bilo kakvih tužbi, šteta, gubitaka ili troškova koji proističu iz ili se odnose na vaše pružanje usluga prevozа, kršenje ovog Sporazuma ili kršenje bilo kakvih primjenjivih zakona ili propisa.",
+    "disputeResolution": "Rješavanje Sporova",
+    "disputeResolutionText": "Svi sporovi koji proističu iz ili se odnose na ovaj Sporazum biće riješeni kroz obavezujuću arbitražu u skladu sa zakonima Crne Gore. Odričete se bilo kakvog prava da učestvujete u kolektivnoj tužbi ili kolektivnoj arbitraži.",
+    "governingLaw": "Primjenjivo Pravo",
+    "governingLawText": "Ovaj Sporazum će se upravljati i tumačiti u skladu sa zakonima Crne Gore, bez obzira na principe sukoba zakona.",
+    "changesToAgreement": "Izmjene Sporazuma",
+    "changesToAgreementText": "Zadržavamo pravo da modifikujemo ovaj Sporazum u bilo kom trenutku. Obavijestit ćemo vozače o bilo kakvim materijalnim promjenama objavljivanjem ažuriranog sporazuma na našoj web stranici ili kroz mobilnu aplikaciju. Vaše nastavljeno korišćenje platforme nakon takvih modifikacija predstavlja prihvatаnje ažuriranog Sporazuma.",
+    "contactInfo": "Kontakt Informacije",
+    "contactInfoText": "Ako imate pitanja o ovom Sporazumu o Vozaču, molimo vas da nas kontaktirate:",
+    "legalEmail": "Email: hello@adrigo.me",
+    "legalPhone": "Telefon: +48455514375",
+    "legalAddress": "Adresa: Podgorica, Crna Gora"
   }
 }

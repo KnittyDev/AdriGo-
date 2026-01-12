@@ -366,5 +366,105 @@
     "needHelpText": "If you have any questions about account deletion or need assistance, please contact us:",
     "contactEmail": "Email",
     "contactPhone": "Phone"
+  },
+  "driverAgreement": {
+    "title": "Driver Agreement",
+    "lastUpdated": "Last updated: December 2025",
+    "intro": "Introduction",
+    "introText": "This Driver Agreement (\"Agreement\") governs your relationship with Rivora (\"we,\" \"our,\" or \"us\") as a driver partner on our platform. By signing up to become a driver, you agree to be bound by the terms and conditions set forth in this Agreement.",
+    "relationship": "Independent Contractor Relationship",
+    "relationshipText": "You acknowledge and agree that you are an independent contractor and not an employee, agent, or partner of Rivora. You have no authority to bind Rivora and shall not hold yourself out as an employee, agent, or authorized representative of Rivora.",
+    "relationshipItems": {
+      "item1": "You are free to set your own hours and work schedule",
+      "item2": "You are responsible for your own taxes and insurance",
+      "item3": "You may use other ride-hailing platforms simultaneously",
+      "item4": "You are not entitled to employee benefits or protections"
+    },
+    "driverRequirements": "Driver Requirements",
+    "driverRequirementsText": "To use our platform as a driver, you must meet and maintain the following requirements:",
+    "driverRequirementsItems": {
+      "item1": "Be at least 21 years of age",
+      "item2": "Possess a valid driver's license for at least 2 years",
+      "item3": "Have a valid vehicle registration and insurance",
+      "item4": "Pass a background check and vehicle inspection",
+      "item5": "Maintain a clean driving record",
+      "item6": "Have a smartphone capable of running our mobile application",
+      "item7": "Provide accurate and up-to-date personal and vehicle information"
+    },
+    "vehicleRequirements": "Vehicle Requirements",
+    "vehicleRequirementsText": "Your vehicle must meet the following standards:",
+    "vehicleRequirementsItems": {
+      "item1": "Be a 4-door sedan or larger vehicle",
+      "item2": "Be no more than 10 years old (exceptions may apply)",
+      "item3": "Be in good working condition and pass safety inspections",
+      "item4": "Have valid registration and insurance",
+      "item5": "Meet all local and national safety standards",
+      "item6": "Be clean and well-maintained"
+    },
+    "driverObligations": "Driver Obligations",
+    "driverObligationsText": "As a driver, you agree to:",
+    "driverObligationsItems": {
+      "item1": "Provide safe, professional, and courteous transportation services",
+      "item2": "Comply with all applicable traffic laws and regulations",
+      "item3": "Maintain your vehicle in safe and roadworthy condition",
+      "item4": "Treat all riders with respect and professionalism",
+      "item5": "Not discriminate against riders based on race, religion, gender, or any other protected characteristic",
+      "item6": "Not use drugs or alcohol while providing services",
+      "item7": "Respond promptly to ride requests when you are available",
+      "item8": "Complete all accepted rides unless there is a valid safety concern"
+    },
+    "compensation": "Compensation and Fees",
+    "compensationText": "You will receive compensation for completed rides based on our pricing structure. The following applies:",
+    "compensationItems": {
+      "item1": "Fares are calculated based on distance, time, and applicable rates",
+      "item2": "A service fee or commission may be deducted from your earnings",
+      "item3": "Payment is processed weekly to your designated payment method",
+      "item4": "You are responsible for all vehicle-related expenses, including fuel, maintenance, and insurance",
+      "item5": "You are responsible for your own taxes on earnings"
+    },
+    "platformUse": "Platform Use and Restrictions",
+    "platformUseText": "You agree to use our platform only for lawful purposes and in accordance with this Agreement. You agree not to:",
+    "platformUseItems": {
+      "item1": "Accept rides outside of the platform or attempt to circumvent our payment system",
+      "item2": "Cancel rides without valid reason or engage in fraudulent activity",
+      "item3": "Use the platform to transport illegal goods or engage in illegal activities",
+      "item4": "Share your account credentials with others",
+      "item5": "Manipulate the platform or use automated systems to gain unfair advantage",
+      "item6": "Solicit tips or additional payments outside the platform"
+    },
+    "safety": "Safety and Insurance",
+    "safetyText": "Safety is our top priority. You agree to:",
+    "safetyItems": {
+      "item1": "Maintain appropriate insurance coverage for your vehicle",
+      "item2": "Report any accidents or incidents immediately",
+      "item3": "Cooperate with safety investigations",
+      "item4": "Follow all safety protocols and guidelines provided by Rivora",
+      "item5": "Ensure your vehicle meets all safety standards"
+    },
+    "termination": "Termination",
+    "terminationText": "Either party may terminate this Agreement at any time with or without cause. Rivora may immediately suspend or terminate your access to the platform if you:",
+    "terminationItems": {
+      "item1": "Violate any terms of this Agreement",
+      "item2": "Engage in fraudulent, illegal, or unsafe conduct",
+      "item3": "Fail to maintain required licenses, insurance, or vehicle standards",
+      "item4": "Receive multiple complaints or poor ratings from riders"
+    },
+    "intellectualProperty": "Intellectual Property",
+    "intellectualPropertyText": "All intellectual property rights in the platform, including but not limited to trademarks, logos, and software, remain the exclusive property of Rivora. You are granted a limited, non-exclusive, non-transferable license to use the platform solely for the purpose of providing transportation services.",
+    "limitation": "Limitation of Liability",
+    "limitationText": "To the maximum extent permitted by law, Rivora shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of the platform or your provision of transportation services.",
+    "indemnification": "Indemnification",
+    "indemnificationText": "You agree to indemnify and hold harmless Rivora and its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising out of or relating to your provision of transportation services, violation of this Agreement, or violation of any applicable laws or regulations.",
+    "disputeResolution": "Dispute Resolution",
+    "disputeResolutionText": "Any disputes arising out of or relating to this Agreement shall be resolved through binding arbitration in accordance with the laws of Montenegro. You waive any right to participate in a class action lawsuit or class-wide arbitration.",
+    "governingLaw": "Governing Law",
+    "governingLawText": "This Agreement shall be governed by and construed in accordance with the laws of Montenegro, without regard to conflict of law principles.",
+    "changesToAgreement": "Changes to Agreement",
+    "changesToAgreementText": "We reserve the right to modify this Agreement at any time. We will notify drivers of any material changes by posting the updated agreement on our website or through the mobile application. Your continued use of the platform after such modifications constitutes acceptance of the updated Agreement.",
+    "contactInfo": "Contact Information",
+    "contactInfoText": "If you have any questions about this Driver Agreement, please contact us:",
+    "legalEmail": "Email: hello@adrigo.me",
+    "legalPhone": "Phone: +48455514375",
+    "legalAddress": "Address: Podgorica, Montenegro"
   }
 }

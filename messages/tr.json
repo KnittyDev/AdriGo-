@@ -366,5 +366,105 @@
     "needHelpText": "Hesap silme hakkında sorularınız varsa veya yardıma ihtiyacınız varsa, lütfen bizimle iletişime geçin:",
     "contactEmail": "E-posta",
     "contactPhone": "Telefon"
+  },
+  "driverAgreement": {
+    "title": "Sürücü Sözleşmesi",
+    "lastUpdated": "Son güncelleme: Aralık 2025",
+    "intro": "Giriş",
+    "introText": "Bu Sürücü Sözleşmesi (\"Sözleşme\"), platformumuzda sürücü ortağı olarak Rivora (\"biz,\" \"bizim,\" veya \"bize\") ile ilişkinizi yönetir. Sürücü olmak için kaydolarak, bu Sözleşmede belirtilen şart ve koşullara bağlı kalmayı kabul edersiniz.",
+    "relationship": "Bağımsız Yüklenici İlişkisi",
+    "relationshipText": "Bağımsız bir yüklenici olduğunuzu ve Rivora'nın bir çalışanı, acentesi veya ortağı olmadığınızı kabul ve beyan edersiniz. Rivora'yı bağlama yetkiniz yoktur ve kendinizi Rivora'nın çalışanı, acentesi veya yetkili temsilcisi olarak tanıtmayacaksınız.",
+    "relationshipItems": {
+      "item1": "Kendi saatlerinizi ve çalışma programınızı belirleme özgürlüğüne sahipsiniz",
+      "item2": "Kendi vergilerinizden ve sigortanızdan sorumlusunuz",
+      "item3": "Aynı anda diğer yolcu çağırma platformlarını kullanabilirsiniz",
+      "item4": "Çalışan hakları veya korumalarına hak kazanamazsınız"
+    },
+    "driverRequirements": "Sürücü Gereksinimleri",
+    "driverRequirementsText": "Platformumuzu sürücü olarak kullanmak için aşağıdaki gereksinimleri karşılamalı ve sürdürmelisiniz:",
+    "driverRequirementsItems": {
+      "item1": "En az 21 yaşında olmak",
+      "item2": "En az 2 yıllık geçerli bir sürücü belgesine sahip olmak",
+      "item3": "Geçerli araç ruhsatı ve sigortasına sahip olmak",
+      "item4": "Arka plan kontrolünden ve araç muayenesinden geçmek",
+      "item5": "Temiz bir sürüş kaydına sahip olmak",
+      "item6": "Mobil uygulamamızı çalıştırabilecek bir akıllı telefona sahip olmak",
+      "item7": "Doğru ve güncel kişisel ve araç bilgileri sağlamak"
+    },
+    "vehicleRequirements": "Araç Gereksinimleri",
+    "vehicleRequirementsText": "Aracınız aşağıdaki standartları karşılamalıdır:",
+    "vehicleRequirementsItems": {
+      "item1": "4 kapılı sedan veya daha büyük bir araç olmak",
+      "item2": "10 yaşından büyük olmamak (istisnalar uygulanabilir)",
+      "item3": "İyi çalışır durumda olmak ve güvenlik muayenelerinden geçmek",
+      "item4": "Geçerli ruhsat ve sigortaya sahip olmak",
+      "item5": "Tüm yerel ve ulusal güvenlik standartlarını karşılamak",
+      "item6": "Temiz ve bakımlı olmak"
+    },
+    "driverObligations": "Sürücü Yükümlülükleri",
+    "driverObligationsText": "Sürücü olarak şunları kabul edersiniz:",
+    "driverObligationsItems": {
+      "item1": "Güvenli, profesyonel ve nazik ulaşım hizmetleri sağlamak",
+      "item2": "Tüm geçerli trafik yasalarına ve düzenlemelerine uymak",
+      "item3": "Aracınızı güvenli ve yol durumunda tutmak",
+      "item4": "Tüm yolculara saygı ve profesyonellikle davranmak",
+      "item5": "Irk, din, cinsiyet veya başka herhangi bir korumalı özelliğe dayalı olarak yolculara ayrımcılık yapmamak",
+      "item6": "Hizmet sağlarken uyuşturucu veya alkol kullanmamak",
+      "item7": "Müsait olduğunuzda yolculuk taleplerine hızlıca yanıt vermek",
+      "item8": "Geçerli bir güvenlik endişesi olmadığı sürece kabul edilen tüm yolculukları tamamlamak"
+    },
+    "compensation": "Ücretlendirme ve Ücretler",
+    "compensationText": "Fiyatlandırma yapımıza göre tamamlanan yolculuklar için ücret alacaksınız. Aşağıdakiler geçerlidir:",
+    "compensationItems": {
+      "item1": "Ücretler mesafe, süre ve geçerli oranlara göre hesaplanır",
+      "item2": "Kazancınızdan bir hizmet ücreti veya komisyon kesilebilir",
+      "item3": "Ödeme, belirlediğiniz ödeme yöntemine haftalık olarak işlenir",
+      "item4": "Yakıt, bakım ve sigorta dahil tüm araçla ilgili giderlerden sorumlusunuz",
+      "item5": "Kendi kazanç vergilerinizden sorumlusunuz"
+    },
+    "platformUse": "Platform Kullanımı ve Kısıtlamalar",
+    "platformUseText": "Platformumuzu yalnızca yasal amaçlarla ve bu Sözleşmeye uygun olarak kullanmayı kabul edersiniz. Şunları yapmayacağınızı kabul edersiniz:",
+    "platformUseItems": {
+      "item1": "Platform dışında yolculuk kabul etmek veya ödeme sistemimizi aşmaya çalışmak",
+      "item2": "Geçerli bir neden olmadan yolculukları iptal etmek veya dolandırıcılık faaliyetlerine girmek",
+      "item3": "Yasadışı malları taşımak veya yasadışı faaliyetlere girmek için platformu kullanmak",
+      "item4": "Hesap bilgilerinizi başkalarıyla paylaşmak",
+      "item5": "Platformu manipüle etmek veya haksız avantaj elde etmek için otomatik sistemler kullanmak",
+      "item6": "Platform dışında bahşiş veya ek ödeme talep etmek"
+    },
+    "safety": "Güvenlik ve Sigorta",
+    "safetyText": "Güvenlik bizim önceliğimizdir. Şunları kabul edersiniz:",
+    "safetyItems": {
+      "item1": "Aracınız için uygun sigorta kapsamını sürdürmek",
+      "item2": "Herhangi bir kaza veya olayı derhal bildirmek",
+      "item3": "Güvenlik soruşturmalarına işbirliği yapmak",
+      "item4": "Rivora tarafından sağlanan tüm güvenlik protokollerini ve yönergelerini takip etmek",
+      "item5": "Aracınızın tüm güvenlik standartlarını karşıladığından emin olmak"
+    },
+    "termination": "Fesih",
+    "terminationText": "Her iki taraf da sebep göstermeksizin veya sebep göstererek bu Sözleşmeyi istediği zaman feshedebilir. Rivora, aşağıdaki durumlarda platforma erişiminizi derhal askıya alabilir veya sonlandırabilir:",
+    "terminationItems": {
+      "item1": "Bu Sözleşmenin herhangi bir şartını ihlal etmek",
+      "item2": "Dolandırıcılık, yasadışı veya güvensiz davranışlarda bulunmak",
+      "item3": "Gerekli lisansları, sigortayı veya araç standartlarını sürdürememek",
+      "item4": "Yolculardan birden fazla şikayet veya düşük puan almak"
+    },
+    "intellectualProperty": "Fikri Mülkiyet",
+    "intellectualPropertyText": "Platformdaki tüm fikri mülkiyet hakları, ticari markalar, logolar ve yazılım dahil ancak bunlarla sınırlı olmamak üzere, Rivora'nın münhasır mülkiyetindedir. Yalnızca ulaşım hizmetleri sağlama amacıyla platformu kullanmak için size sınırlı, münhasır olmayan, devredilemez bir lisans verilmiştir.",
+    "limitation": "Sorumluluk Sınırlaması",
+    "limitationText": "Yasaların izin verdiği azami ölçüde, Rivora, platformu kullanımınızdan veya ulaşım hizmetleri sağlamanızdan kaynaklanan veya bunlarla ilgili dolaylı, arızi, özel, sonuçsal veya cezai zararlardan sorumlu olmayacaktır.",
+    "indemnification": "Tazminat",
+    "indemnificationText": "Ulaşım hizmetleri sağlamanızdan, bu Sözleşmeyi ihlal etmenizden veya herhangi bir geçerli yasa veya düzenlemeyi ihlal etmenizden kaynaklanan veya bunlarla ilgili herhangi bir talep, zarar, kayıp veya giderden Rivora ve memurları, yöneticileri, çalışanları ve acentelerini tazmin etmeyi ve zararsız tutmayı kabul edersiniz.",
+    "disputeResolution": "Uyuşmazlık Çözümü",
+    "disputeResolutionText": "Bu Sözleşmeden kaynaklanan veya bununla ilgili herhangi bir uyuşmazlık, Karadağ yasalarına uygun olarak bağlayıcı tahkim yoluyla çözülecektir. Toplu dava veya toplu tahkimde yer alma hakkınızdan feragat edersiniz.",
+    "governingLaw": "Geçerli Hukuk",
+    "governingLawText": "Bu Sözleşme, hukuk çatışması ilkelerine bakılmaksızın Karadağ yasalarına göre yönetilecek ve yorumlanacaktır.",
+    "changesToAgreement": "Sözleşme Değişiklikleri",
+    "changesToAgreementText": "Bu Sözleşmeyi istediğimiz zaman değiştirme hakkını saklı tutarız. Güncellenmiş sözleşmeyi web sitemizde veya mobil uygulama üzerinden yayınlayarak sürücülere önemli değişiklikler hakkında bilgi vereceğiz. Bu tür değişikliklerden sonra platformu kullanmaya devam etmeniz, güncellenmiş Sözleşmeyi kabul ettiğiniz anlamına gelir.",
+    "contactInfo": "İletişim Bilgileri",
+    "contactInfoText": "Bu Sürücü Sözleşmesi hakkında sorularınız varsa, lütfen bizimle iletişime geçin:",
+    "legalEmail": "E-posta: hello@adrigo.me",
+    "legalPhone": "Telefon: +48455514375",
+    "legalAddress": "Adres: Podgorica, Karadağ"
   }
 }
