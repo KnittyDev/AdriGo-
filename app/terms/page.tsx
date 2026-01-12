@@ -156,7 +156,7 @@ export default function Terms() {
                       {t('contactInfoText')}
                     </p>
                     <div className="mt-4 p-4 bg-background-light rounded-lg">
-                      <p className="text-text-primary font-medium">AdriGo+ Legal Department</p>
+                      <p className="text-text-primary font-medium">Rivora Legal Department</p>
                       <p className="text-text-secondary">{t('legalEmail')}</p>
                       <p className="text-text-secondary">{t('legalPhone')}</p>
                       <p className="text-text-secondary">{t('legalAddress')}</p>

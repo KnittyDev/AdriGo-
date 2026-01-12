@@ -156,7 +156,7 @@ export default function Home() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}>
                 <AppStoreBadge
-                  url="https://apps.apple.com/app/adrigo-plus/id123456789"
+                  url="https://apps.apple.com/app/id6756029035"
                   width={180}
                 />
                 <GooglePlayBadge
@@ -250,9 +250,11 @@ export default function Home() {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`} style={{ transitionDelay: '200ms' }}>
                   <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 flex-shrink-0 rounded-full bg-cover bg-center" data-alt="User avatar" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXLxOfETejeG0YI1rbZoridW8o4uL4RA_rYSy5Ewu7_A-dUYn1mOJD2GiXTrmHrCgC1Q9geNt4WP_bmEoIEaOhbWUfKQgWVnnLqBObLfTraQdNRbh-rBoOhI_rO85Uw7WiceVX8mnyOrxKvpmhV4aZ5P2kKe1im7S-pL5A9XSQcbufT-ood75gRfSapFuRcw-GyQoPmA8hngW-SkemKemUI3MhuQ4-4LusdsG2xe-DzhaJiVQsex_kjLU_fVOjZD0dBIP660lbzcle")'}}></div>
+                    <div className="h-12 w-12 flex-shrink-0 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                      <span className="material-symbols-outlined text-gray-500 dark:text-gray-400 text-3xl">account_circle</span>
+                    </div>
                     <div className="flex-1">
-                      <p className="font-bold text-text-primary">Sarah J.</p>
+                      <p className="font-bold text-text-primary">Marko Vuković</p>
                       <div className="flex gap-1">
                         <svg className="w-5 h-5 text-yellow-400 drop-shadow-lg hover:scale-110 transition-transform duration-200" viewBox="0 0 24 24" fill="currentColor">
                           <defs>
@@ -315,9 +317,11 @@ export default function Home() {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`} style={{ transitionDelay: '400ms' }}>
                   <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 flex-shrink-0 rounded-full bg-cover bg-center" data-alt="User avatar" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-gEhXXdaW2Arwl5NLontdYLWqU4bhNe6Ljp8S5x5AqV-TFcroFm4AXquNP3mWqGvOpyB8tQy4FQeRFlLDx06UDk9Py1LsfQts_PGN0oLo2oAySrFt8IidLLwjKTlzkst2zqgeJ9vCg7M0dIWqPBqLLQsFn01yJ72LCe3d4-MHReQIcFeFYB_yuijoU8OHh1R0yWATFcD5wQ6ThuNFR0r-dfcNhHJflf9E-jVq-ujhn4-_utmp9hibO8ZPnEoj_vj8fEZLz59Qdlxb")'}}></div>
+                    <div className="h-12 w-12 flex-shrink-0 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                      <span className="material-symbols-outlined text-gray-500 dark:text-gray-400 text-3xl">account_circle</span>
+                    </div>
                     <div className="flex-1">
-                      <p className="font-bold text-text-primary">Mike R.</p>
+                      <p className="font-bold text-text-primary">Yunus Emre Çelik</p>
                       <div className="flex gap-1">
                         <svg className="w-5 h-5 text-yellow-400 drop-shadow-lg hover:scale-110 transition-transform duration-200" viewBox="0 0 24 24" fill="currentColor">
                           <defs>
@@ -380,9 +384,11 @@ export default function Home() {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`} style={{ transitionDelay: '600ms' }}>
                   <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 flex-shrink-0 rounded-full bg-cover bg-center" data-alt="User avatar" style={{backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrsMH_yy-473TQt0pN-H2BrelKANImCDUwYJUMTYave9RI6oSIlww4EmsiFjODaaLIoos93KjIh5_zxm4RKxd0fCY4SpwnO1HdOuz11OQWaIdCETR92Swi0avoL_VqV046YMdfFX53v7PR8XhQzlb9SkBHewikYDUGQWRQFoN-GkW6xMziZFC3RNFz0s4RRl5DEjLqlqm5lYWNplQta1HCBKxjw6wqw8vRt_URGXeNqpemVdcmdFI3J-Sn1R-c6KKkgUGjCMhxa38K")'}}></div>
+                    <div className="h-12 w-12 flex-shrink-0 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                      <span className="material-symbols-outlined text-gray-500 dark:text-gray-400 text-3xl">account_circle</span>
+                    </div>
                     <div className="flex-1">
-                      <p className="font-bold text-text-primary">Emily K.</p>
+                      <p className="font-bold text-text-primary">Anna Kowalska</p>
                       <div className="flex gap-1">
                         <svg className="w-5 h-5 text-yellow-400 drop-shadow-lg hover:scale-110 transition-transform duration-200" viewBox="0 0 24 24" fill="currentColor">
                           <defs>
@@ -446,7 +452,7 @@ export default function Home() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}>
                 <AppStoreBadge
-                  url="https://apps.apple.com/app/adrigo-plus/id123456789"
+                  url="https://apps.apple.com/app/id6756029035"
                   width={180}
                 />
                 <GooglePlayBadge

@@ -141,7 +141,7 @@ export default function Privacy() {
                       {t('contactUsText')}
                     </p>
                     <div className="mt-4 p-4 bg-background-light rounded-lg">
-                      <p className="text-text-primary font-medium">AdriGo+ Support</p>
+                      <p className="text-text-primary font-medium">Rivora Support</p>
                       <p className="text-text-secondary">{t('supportEmail')}</p>
                       <p className="text-text-secondary">{t('supportPhone')}</p>
                       <p className="text-text-secondary">{t('supportAddress')}</p>

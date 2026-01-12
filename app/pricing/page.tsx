@@ -304,7 +304,7 @@ export default function Pricing() {
                 </p>
               <div className="flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
                 <AppStoreBadge
-                  url="https://apps.apple.com/app/adrigo-plus/id123456789"
+                  url="https://apps.apple.com/app/id6756029035"
                   width={200}
                 />
                 <GooglePlayBadge

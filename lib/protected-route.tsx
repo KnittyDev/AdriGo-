@@ -20,7 +20,7 @@ export function ProtectedRoute({ children }: { children: React.ReactNode }) {
           <div className="h-16 w-16">
             <img 
               src="/adrigologo.png" 
-              alt="AdriGo+ Logo" 
+              alt="Rivora Logo" 
               className="h-full w-full object-contain animate-pulse"
             />
           </div>

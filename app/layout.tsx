@@ -21,7 +21,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Adrigo - Modern Transportation Platform",
+  title: "Rivora - Modern Transportation Platform",
   description: "Revolutionary transportation platform connecting riders with drivers. Fast, reliable, and affordable rides at your fingertips.",
 };
 

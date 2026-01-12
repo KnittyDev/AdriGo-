@@ -26,7 +26,7 @@ export default function AdminSidebar() {
         <div className="h-8 w-8">
           <img 
             src="/adrigologo.png" 
-            alt="AdriGo+ Logo" 
+            alt="Rivora Logo" 
             className="h-full w-full object-contain"
           />
         </div>

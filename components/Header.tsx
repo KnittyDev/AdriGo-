@@ -18,18 +18,17 @@ export default function Header() {
               <div className="h-8 w-8">
                 <img 
                   src="/adrigologo.png" 
-                  alt="AdriGo+ Logo" 
+                  alt="Rivora Logo" 
                   className="h-full w-full object-contain"
                 />
               </div>
-              <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-text-primary">AdriGo+</h2>
+              <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-text-primary">Rivora</h2>
             </a>
             <nav className="hidden items-center gap-8 md:flex md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
               <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/features">{t('features')}</a>
               <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/pricing">{t('pricing')}</a>
               <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/locations">{t('locations')}</a>
               <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/#download">{t('download')}</a>
-              <a className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary" href="/contact">{t('contact')}</a>
             </nav>
             <div className="flex items-center gap-4">
               {/* Driver Button */}
@@ -89,13 +88,6 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t('download')}
-            </a>
-            <a 
-              className="block text-base font-medium text-text-secondary hover:text-text-primary transition-colors py-2"
-              href="/contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {t('contact')}
             </a>
             
             {/* Driver Button Mobile */}
